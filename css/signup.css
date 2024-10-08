@@ -1,0 +1,30 @@
+
+body {
+    background-color: #f8f9fa; /* Light background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+.signup-container {
+    background-color: white; /* White background for the form */
+    padding: 40px; /* Spacing inside the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 100%;
+    max-width: 500px; 
+}
+.wide-input {
+    width: 100%; 
+}
+h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+.btn {
+    width: 100%; /* Full width for buttons */
+}
+p {
+    text-align: center; /* Center the paragraph */
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarian Dashboard</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header with Logout Button -->
+    <header class="bg-primary text-white p-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-8">
+                    <h1 class="h3">Librarian Dashboard</h1>
+                </div>
+                <div class="col-md-6 col-4 text-right">
+                    <button id="logout" class="btn btn-danger btn-sm">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Library System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./member.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./librarian.html">Books</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <h2 class="mb-4">Manage Books</h2>
+
+        <!-- Add Book Form -->
+        <div class="card mb-4">
+            <div class="card-header">Add New Book</div>
+            <div class="card-body">
+                <form id="add-book-form">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" id="title" class="form-control" placeholder="Book Title" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" id="author" class="form-control" placeholder="Author" required>
+                        </div>
+                        <!-- <div class="col-md-6 mb-3">
+                            <input type="text" id="genre" class="form-control" placeholder="Genre" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="number" id="published_year" class="form-control" placeholder="Published Year" required>
+                        </div> -->
+                    </div>
+                    <button type="submit" class="btn btn-success">Add Book</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- View Books Section -->
+        <h2 class="mb-4">Books List</h2>
+        <table class="table table-bordered" id="books-table">
+            <thead>
+                <tr>
+                    <th>Book ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <!-- <th>Genre</th>
+                    <th>Published Year</th> -->
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="books-list"></tbody>
+        </table>
+
+        <!-- Edit Book Modal -->
+        <div class="modal fade" id="editBookModal" tabindex="-1" aria-labelledby="editBookModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editBookModalLabel">Edit Book</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="edit-book-form">
+                            <input type="hidden" id="edit-book-id">
+                            <div class="form-group">
+                                <label for="edit-title">Title</label>
+                                <input type="text" id="edit-title" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-author">Author</label>
+                                <input type="text" id="edit-author" class="form-control" required>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="edit-genre">Genre</label>
+                                <input type="text" id="edit-genre" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-published_year">Published Year</label>
+                                <input type="number" id="edit-published_year" class="form-control" required>
+                            </div> -->
+                            <button type="submit" class="btn btn-primary">Update Book</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Include your JS file -->
+    <script src="./js/librarian.js"></script>
+    <!-- Bootstrap JS CDN and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

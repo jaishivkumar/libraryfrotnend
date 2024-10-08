@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management - Member Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="bg-primary text-white p-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-8">
+                    <h1 class="h3">Members</h1>
+                </div>
+                <div class="col-md-6 col-4 text-end">
+                  <button id="logout" class="btn btn-danger btn-sm">Logout</button> 
+              </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Library System</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./member.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./librarian.html">Books</a>
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- <h1>Member Dashboard</h1> -->
+
+        <!-- View Available Books -->
+        <h2>Available Books</h2>
+        <div id="availableBooks" class="mb-4">
+            <ul id="bookList" class="list-group"></ul>
+        </div>
+
+        <!-- Borrow History -->
+        <h2>Borrow History</h2>
+        <div id="borrowHistory" class="mb-4">
+            <ul id="historyList" class="list-group"></ul>
+        </div>
+
+        <!-- Account Actions -->
+        <h2>Account Actions</h2>
+        <button id="deleteAccountBtn" class="btn btn-danger">
+            Delete My Account
+        </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/member-board.js"></script>
+</body>
+</html>

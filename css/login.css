@@ -1,0 +1,30 @@
+
+body {
+    background-color: #f8f9fa; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+}
+.login-container {
+    background-color: white; 
+    padding: 40px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+}
+.wide-input {
+    width: 100%; 
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+.btn {
+    width: 100%; 
+}
+p {
+    text-align: center; 
+}
